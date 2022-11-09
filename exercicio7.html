@@ -1,0 +1,47 @@
+<script>
+    
+    let nome = prompt("Digite o nome do aluno: ")
+    //console.log(nome)
+    let nomeAlunos = []
+    let add = nomeAlunos.push(nome)
+    //console.log(nomeAlunos)
+    let matricula = prompt("Digite a matricula: ")
+    //console.log(matricula)
+    let matriculaAluno= []
+    let addmatricula = matriculaAluno.push(matricula)
+    //console.log(matriculaAluno)
+    let nota = 0
+    let notas = []
+    let soma = 0
+
+    for(let nota = 1; nota<=4;  nota++){
+        let nota = Number(prompt("Digite as notas do aluno: "))
+        let addnotas = notas.push(nota)
+        console.log(notas)
+    }
+    for(let i = 0; i<notas.length; i++){
+        soma+= notas[i]
+        
+    }
+    let media = soma / notas.length
+    //console.log(media)
+
+    if(media >= 7){
+        alert(`Ola, ${nomeAlunos}, sua matricula é ${matriculaAluno}, 
+        suas notas são ${notas} e sua media foi ${media}
+        Parabéns você foi aprovado(a)!!!!`)
+    }else if(media >=5){
+        alert(`Ola, ${nomeAlunos}, sua matricula é ${matriculaAluno}, 
+        suas notas são ${notas} e sua media foi ${media}
+        Você está de recuperação, estude mais!!!`)
+    }else if(media <= 5){
+        alert(`Ola, ${nomeAlunos}, sua matricula é ${matriculaAluno}, 
+        suas notas são ${notas} e sua media foi ${media}
+        Você foi reprovado(a), devia ter se esforçado!!!`)
+    }
+    
+
+
+    /*alert(`${nomeAlunos} e ${matriculaAluno} e ${notas} e ${media} `)
+    console.log(nomeAlunos, matriculaAluno, notas, media)*/
+</script>
